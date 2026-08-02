@@ -1,0 +1,14 @@
+# Compiled files
+target/
+build/
+dist/
+
+# NetBeans
+nbproject/private/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
