@@ -62,7 +62,6 @@ The project follows the **MVC (Model-View-Controller)** architecture and provide
 - Dashboard
 - View Attendance
 - View Subjects
-- View Notices
 
 ---
 
