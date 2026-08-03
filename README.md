@@ -229,37 +229,43 @@ Deploy on
 
 ## 🏠 Home Page
 
-> Add Screenshot
+<img width="1920" height="1020" alt="Screenshot 2026-08-03 185335" src="https://github.com/user-attachments/assets/29cb1ea6-7a44-4d0b-81dc-f4f0a3c8d627" />
+
 
 ---
 
 ## 👨‍💼 Admin Dashboard
 
-> Add Screenshot
+<img width="1920" height="1020" alt="Screenshot 2026-08-03 185452" src="https://github.com/user-attachments/assets/68938a9a-4700-4fc0-a3e9-b6d2a7813861" />
+
 
 ---
 
 ## 👨‍🏫 Faculty Dashboard
 
-> Add Screenshot
+<img width="1920" height="1020" alt="Screenshot 2026-08-03 185514" src="https://github.com/user-attachments/assets/719d3d73-5c63-44cb-aca6-fbca986af070" />
+
 
 ---
 
 ## 👨‍🎓 Student Dashboard
 
-> Add Screenshot
+<img width="1920" height="1020" alt="Screenshot 2026-08-03 185538" src="https://github.com/user-attachments/assets/aa6fbd12-a88c-44a5-bf10-e3013a067d2f" />
+
 
 ---
 
 ## 📋 Attendance Module
 
-> Add Screenshot
+<img width="1920" height="1020" alt="Screenshot 2026-08-03 185631" src="https://github.com/user-attachments/assets/f1d215a7-91a2-4792-bce5-c317ba5b9431" />
+
 
 ---
 
 ## 👥 Student Management
 
-> Add Screenshot
+<img width="1920" height="1020" alt="Screenshot 2026-08-03 185641" src="https://github.com/user-attachments/assets/ea01a02c-fc7b-4fe3-a411-4302cb4f617f" />
+
 
 ---
 
