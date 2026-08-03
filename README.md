@@ -1,40 +1,313 @@
-# College ERP System
+<div align="center">
 
-A web-based College ERP System developed using Java, JSP, Servlets, JDBC and MySQL.
+# 🎓 College ERP System
 
-## Features
+### A Complete College ERP Management System built using Java, JSP, Servlets, JDBC, Maven & MySQL
 
-- Admin Portal
-- Faculty Portal
-- Student Portal
+![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk)
+![JSP](https://img.shields.io/badge/JSP-JakartaEE-blue?style=for-the-badge)
+![Servlet](https://img.shields.io/badge/Servlet-JakartaEE-red?style=for-the-badge)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?style=for-the-badge&logo=mysql)
+![Maven](https://img.shields.io/badge/Maven-Build-red?style=for-the-badge&logo=apachemaven)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+</div>
+
+---
+
+# 📖 About
+
+College ERP System is a role-based web application developed to simplify the management of students, faculty, departments, subjects, attendance and notices within a college.
+
+The project follows the **MVC (Model-View-Controller)** architecture and provides dedicated portals for:
+
+- 👨‍💼 Admin
+- 👨‍🏫 Faculty
+- 👨‍🎓 Student
+
+---
+
+# ✨ Features
+
+## 👨‍💼 Admin Portal
+
+- Secure Login
+- Dashboard
+- Department Management
 - Student Management
 - Faculty Management
-- Department Management
 - Subject Management
-- Attendance Management
+- Faculty-Subject Assignment
 - Notice Management
-- Role Based Login
+- Attendance Monitoring
+- Attendance Search & Filters
 - BCrypt Password Encryption
 
-## Technologies Used
+---
 
-- Java
-- JSP
-- Servlets
-- JDBC
-- MySQL
-- Maven
-- HTML
-- CSS
+## 👨‍🏫 Faculty Portal
 
-## Database
+- Secure Login
+- Dashboard
+- Assigned Subjects
+- Take Attendance
+- View Attendance
+- Attendance Filters
 
-- 5 Departments
-- 15 Faculty
-- 50 Students
-- 80 Subjects
-- 2800 Attendance Records
+---
 
-## Developed By
+## 👨‍🎓 Student Portal
 
-Souvik Sarkar
+- Secure Login
+- Dashboard
+- View Attendance
+- View Subjects
+- View Notices
+
+---
+
+# 🛠 Tech Stack
+
+| Layer | Technology |
+|--------|------------|
+| Language | Java |
+| Frontend | JSP, HTML5, CSS3, JavaScript |
+| Backend | Java Servlets |
+| Architecture | MVC |
+| Database | MySQL |
+| Connectivity | JDBC |
+| Build Tool | Maven |
+| IDE | Apache NetBeans |
+| Server | Apache Tomcat 10 |
+| Authentication | BCrypt |
+
+---
+
+# 📁 Project Structure
+
+```
+CollegeERP
+│
+├── src
+│   └── main
+│       ├── java
+│       │   ├── controller
+│       │   ├── dao
+│       │   ├── model
+│       │   └── util
+│       │
+│       ├── resources
+│       └── webapp
+│           ├── css
+│           ├── images
+│           ├── js
+│           └── jsp
+│
+├── database
+│   └── college_erp.sql
+│
+├── pom.xml
+└── README.md
+```
+
+---
+
+# 🗄 Database
+
+The project contains realistic demo data.
+
+| Table | Records |
+|--------|--------:|
+| Departments | 5 |
+| Faculty | 15 |
+| Students | 50 |
+| Subjects | 80 |
+| Faculty-Subject Mapping | 90 |
+| Attendance | 2800+ |
+| Users | Role Based |
+
+---
+
+# 🔑 Demo Credentials
+
+## 👨‍💼 Admin
+
+| Username | Password |
+|----------|----------|
+| **Souvik** | **admin** |
+
+---
+
+## 👨‍🏫 Faculty
+
+| Username | Password |
+|----------|----------|
+| faculty1 | faculty |
+| faculty2 | faculty |
+
+---
+
+## 👨‍🎓 Student
+
+| Username | Password |
+|----------|----------|
+| student1 | student |
+| student2 | student |
+
+---
+
+# 🚀 Getting Started
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/Souvik686/college-erp-system.git
+```
+
+---
+
+## 2️⃣ Import Database
+
+Import
+
+```
+database/college_erp.sql
+```
+
+into MySQL.
+
+---
+
+## 3️⃣ Configure Database
+
+Open
+
+```
+src/main/java/util/DBConnection.java
+```
+
+Update your credentials.
+
+```java
+private static final String URL =
+"jdbc:mysql://localhost:3306/college_erp";
+
+private static final String USER =
+"root";
+
+private static final String PASSWORD =
+"YOUR_MYSQL_PASSWORD";
+```
+
+---
+
+## 4️⃣ Open Project
+
+Open using
+
+- Apache NetBeans
+
+---
+
+## 5️⃣ Build Project
+
+```
+Clean & Build
+```
+
+---
+
+## 6️⃣ Deploy
+
+Deploy on
+
+- Apache Tomcat 10
+
+---
+
+# 📸 Screenshots
+
+## 🏠 Home Page
+
+> Add Screenshot
+
+---
+
+## 👨‍💼 Admin Dashboard
+
+> Add Screenshot
+
+---
+
+## 👨‍🏫 Faculty Dashboard
+
+> Add Screenshot
+
+---
+
+## 👨‍🎓 Student Dashboard
+
+> Add Screenshot
+
+---
+
+## 📋 Attendance Module
+
+> Add Screenshot
+
+---
+
+## 👥 Student Management
+
+> Add Screenshot
+
+---
+
+# 🔒 Security
+
+- BCrypt Password Hashing
+- Role-Based Authentication
+- Session Management
+- JDBC Prepared Statements
+- Password Encryption
+
+---
+
+# 🎯 Future Enhancements
+
+- Student Result Management
+- Fee Management
+- Timetable Module
+- Email Notifications
+- Parent Portal
+- REST API
+- Mobile Responsive UI
+- Dashboard Analytics
+
+---
+
+# 👨‍💻 Developer
+
+## Souvik Sarkar
+
+**Bachelor of Computer Applications (BCA)**
+
+📍 Kolkata, India
+
+GitHub:
+
+https://github.com/Souvik686
+
+---
+
+# ⭐ Support
+
+If you found this project useful, consider giving it a **⭐ Star** on GitHub.
+
+---
+
+<div align="center">
+
+### Thank you for visiting ❤️
+
+</div>
