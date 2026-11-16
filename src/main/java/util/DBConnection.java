@@ -6,18 +6,29 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
-    private static final String URL = System.getenv().getOrDefault(
-        "DB_URL", "jdbc:mysql://localhost:3306/college_erp");
-    private static final String USER = System.getenv().getOrDefault(
-        "DB_USER", "root");
-    private static final String PASSWORD = System.getenv().getOrDefault(
-        "DB_PASSWORD", "student123");
-
     public static Connection getConnection() {
+        String url = System.getenv("DB_URL");
+        String user = System.getenv("DB_USER");
+        String password = System.getenv("DB_PASSWORD");
+
+        if (url == null || url.trim().isEmpty()) {
+            url = "jdbc:mysql://localhost:3306/college_erp";
+        }
+        if (user == null || user.trim().isEmpty()) {
+            user = "root";
+        }
+        if (password == null) {
+            password = "student123";
+        }
+
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            return DriverManager.getConnection(URL, USER, PASSWORD);
+            return DriverManager.getConnection(url, user, password);
         } catch (ClassNotFoundException | SQLException e) {
+            System.err.println("=== DB CONNECTION FAILED ===");
+            System.err.println("Attempted URL: " + url);
+            System.err.println("Attempted USER: " + user);
+            System.err.println("Error Message: " + e.getMessage());
             e.printStackTrace();
         }
         return null;

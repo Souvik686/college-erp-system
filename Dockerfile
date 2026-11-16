@@ -9,6 +9,7 @@ RUN mvn package -DskipTests -B
 # Stage 2 — Run on Tomcat 10
 FROM tomcat:10.1-jre11-temurin
 RUN rm -rf /usr/local/tomcat/webapps/*
+RUN sed -i 's/port="8005"/port="-1"/' /usr/local/tomcat/conf/server.xml
 COPY --from=build /app/target/CollegeERP-1.0-SNAPSHOT.war \
      /usr/local/tomcat/webapps/ROOT.war
 EXPOSE 8080
