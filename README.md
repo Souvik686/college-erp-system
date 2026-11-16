@@ -2,109 +2,99 @@
 
 # 🎓 College ERP System
 
-### A Role-Based College ERP Management System built using Java, JSP, Servlets, JDBC, Maven & MySQL
+### A Role-Based College Management Web Application built with Java, Jakarta EE, Servlets, JSP, JDBC, Maven, MySQL & Docker
 
-![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk)
-![JSP](https://img.shields.io/badge/JSP-JakartaEE-blue?style=for-the-badge)
-![Servlet](https://img.shields.io/badge/Servlet-JakartaEE-red?style=for-the-badge)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?style=for-the-badge&logo=mysql)
-![Maven](https://img.shields.io/badge/Maven-Build-red?style=for-the-badge&logo=apachemaven)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Render-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://college-erp-system-t0l0.onrender.com/)
+[![Java](https://img.shields.io/badge/Java-11%20%7C%2017-orange?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
+[![Jakarta EE](https://img.shields.io/badge/Jakarta%20EE-10-blue?style=for-the-badge&logo=eclipseide&logoColor=white)](https://jakarta.ee/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-00758F?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Maven](https://img.shields.io/badge/Maven-Build-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-A complete web-based College ERP System developed using Java Enterprise technologies.
+<br/>
+
+**[🌐 Experience the Live Application](https://college-erp-system-t0l0.onrender.com/)**
 
 </div>
 
 ---
 
-# 📖 Overview
+## 🌐 Live Demo & Portals
 
-The **College ERP System** is a web application designed to simplify and digitize college administration. It provides separate portals for **Admin**, **Faculty**, and **Students**, enabling efficient management of departments, students, faculty members, subjects, attendance, and notices.
+The application is deployed on cloud infrastructure (Render + TiDB Cloud Serverless MySQL) and is accessible 24/7:
 
-The application follows the **MVC (Model-View-Controller)** architecture using **JSP, Servlets, JDBC, Maven, and MySQL**.
-
----
-
-# ✨ Features
-
-## 👨‍💼 Admin Portal
-
-- Secure Login
-- Dashboard
-- Department Management (Add, Edit, Delete)
-- Student Management
-- Faculty Management
-- Subject Management
-- Faculty Subject Assignment
-- Attendance Monitoring
-- Attendance Search & Filter
-- Notice Management
-- Secure Logout
+| Portal | URL | Default Username | Default Password |
+|---|---|---|---|
+| **🏠 Home Page** | [Open Portal](https://college-erp-system-t0l0.onrender.com/) | — | — |
+| **👨‍💼 Administrator** | [Admin Login](https://college-erp-system-t0l0.onrender.com/jsp/admin-login.jsp) | `admin` *(or `souvik`)* | `admin` |
+| **👨‍🏫 Faculty** | [Faculty Login](https://college-erp-system-t0l0.onrender.com/jsp/faculty-login.jsp) | `faculty1` *(up to `faculty15`)* | `faculty` |
+| **👨‍🎓 Student** | [Student Login](https://college-erp-system-t0l0.onrender.com/jsp/student-login.jsp) | `student1` *(up to `student50`)* | `student` |
 
 ---
 
-## 👨‍🏫 Faculty Portal
+## 📖 Overview
 
-- Secure Login
-- Dashboard
-- View Assigned Subjects
-- Take Student Attendance
-- View Attendance Records
-- Attendance Search
+The **College ERP System** is an enterprise-grade web application designed to digitize and streamline administrative and academic workflows in academic institutions. 
+
+Built with the **Model-View-Controller (MVC)** architectural pattern, the system provides dedicated role-based interfaces for administrators, faculty members, and students with robust session security and granular permission controls.
 
 ---
 
-## 👨‍🎓 Student Portal
+## ✨ Features by Role
 
-- Secure Login
-- Dashboard
-- View Subjects
-- View Attendance
+### 👨‍💼 Administrator Portal
+* **Analytics Dashboard:** Real-time summary statistics for total students, faculty, departments, and course subjects.
+* **Department Management:** Full CRUD operations (Add, Edit, View, Delete) for academic departments.
+* **Student Administration:** Student enrollment, profile management, and department assignment.
+* **Faculty Administration:** Faculty onboarding and profile records.
+* **Subject & Curriculum:** Course catalog management with automated departmental associations.
+* **Faculty-Subject Assignment:** Allocate faculty members to specific subjects.
+* **Attendance Oversight:** Global attendance monitoring with advanced multi-criteria filters (by department, date, student, subject).
 
----
+### 👨‍🏫 Faculty Portal
+* **Personalized Dashboard:** Overview of teaching assignments and active terms.
+* **Subject Allocations:** View all actively assigned teaching subjects and enrolled students.
+* **Attendance Marking:** Interactive interface to record daily student attendance with composite duplicate protection.
+* **Historical Records:** Review and verify past attendance logs with real-time percentage indicators.
 
-# 🛠 Tech Stack
-
-| Category | Technology |
-|----------|------------|
-| Language | Java |
-| Frontend | JSP, HTML5, CSS3 |
-| Backend | Java Servlets |
-| Architecture | MVC |
-| Database | MySQL 8 |
-| Database Connectivity | JDBC |
-| Build Tool | Maven |
-| IDE | Apache NetBeans |
-| Server | Apache Tomcat 10 |
-| Security | BCrypt Password Hashing |
+### 👨‍🎓 Student Portal
+* **Student Dashboard:** Personalized portal showing enrolled department, courses, and notifications.
+* **Subject Catalog:** Detailed overview of enrolled semester subjects and credit hours.
+* **Attendance Tracking:** Real-time visibility into attendance records and percentage metrics per subject.
 
 ---
 
-# 📂 Project Structure
+## 🛠 Tech Stack & Architecture
+
+| Layer | Technology | Description |
+|---|---|---|
+| **Frontend** | JSP, JSTL, HTML5, CSS3, JavaScript | Dynamic server-side UI rendering with clean responsive layouts |
+| **Backend** | Java Servlets (Jakarta Servlet 6.0) | Controller layer orchestrating requests and session validation |
+| **Architecture** | MVC (Model-View-Controller) | Separation of business logic, presentation, and data persistence |
+| **Data Access** | JDBC (Java Database Connectivity) | Pure JDBC DAO pattern with PreparedStatement SQL injection protection |
+| **Database** | MySQL 8.0 / TiDB Cloud Serverless | Relational database with composite keys, cascading rules, and indexes |
+| **Security** | BCrypt (`jbcrypt:0.4`) | Secure salted password hashing and role-based session guards |
+| **Build & Packaging** | Apache Maven | Automated dependency lifecycle producing standard web archives (WAR) |
+| **Containerization** | Docker (Multi-stage build) | Portable packaging with `maven:3.9` and `tomcat:10.1` runtime |
+| **Deployment** | Render + TiDB Cloud | Continuous container deployment connected to managed cloud MySQL |
+
+---
+
+## 📂 Project Directory Structure
 
 ```
 CollegeERP
 │
-├── src
-│   └── main
-│       ├── java
-│       │   ├── controller
-│       │   ├── dao
-│       │   ├── model
-│       │   └── util
-│       │
-│       ├── resources
-│       │
-│       └── webapp
-│           ├── css
-│           ├── images
-│           ├── js
-│           └── jsp
+├── Dockerfile                         # Multi-stage Docker container build (Maven + Tomcat 10)
+├── pom.xml                            # Maven project definition and dependencies
+├── README.md                          # Project documentation
+├── .gitignore                         # Version control exclusions
 │
-├── database
-│   └── college_erp.sql
+├── database/
+│   └── college_erp.sql                # Complete schema DDL and pre-seeded production demo dataset
 │
-├── screenshots
+├── screenshots/                       # Application UI showcase captures
 │   ├── home-page.png
 │   ├── admin-dashboard.png
 │   ├── faculty-dashboard.png
@@ -115,323 +105,167 @@ CollegeERP
 │   ├── attendance-management.png
 │   └── attendance-report.png
 │
-├── pom.xml
-├── README.md
-└── .gitignore
+└── src/main/
+    ├── java/
+    │   ├── controller/                # Jakarta HTTP Servlets (Routing, Auth, CRUD Actions)
+    │   ├── dao/                       # Data Access Objects (Raw SQL via JDBC)
+    │   ├── model/                     # Java Bean Entities (POJOs)
+    │   └── util/                      # DBConnection pool, BCryptUtil security helpers
+    │
+    └── webapp/
+        ├── css/                       # Custom styles
+        ├── js/                        # Client-side validation scripts
+        ├── jsp/                       # Role-separated view templates
+        ├── index.jsp                  # Landing page
+        └── WEB-INF/
+            └── web.xml                # Servlet context mappings
 ```
 
 ---
 
-# 🗄 Database
+## 🗄 Database Design & Pre-seeded Dataset
 
-The project includes a fully populated demo database.
+The database includes a comprehensive schema with relational integrity and seed data:
 
-### Database Statistics
-
-| Table | Records |
-|--------|---------|
-| Departments | 5 |
-| Faculty | 15 |
-| Students | 50 |
-| Subjects | 80 |
-| Faculty-Subject Assignments | 90 |
-| Attendance | 2800+ |
-| Users | Role-Based |
+| Entity | Record Count | Highlights |
+|---|---|---|
+| **Departments** | 5 | Computer Science, Electronics, Civil, Mechanical, Information Tech |
+| **Faculty** | 15 | Profiles linked with user authentication accounts |
+| **Students** | 50 | Enrolled students distributed across active departments |
+| **Subjects** | 80 | Theoretical and practical courses linked to departments |
+| **Faculty-Subject Allocations** | 90+ | Multi-instructor teaching mappings |
+| **Attendance Records** | 2,800+ | Pre-calculated daily attendance records with unique composite indexes |
+| **Users** | 68 | Role-segregated accounts secured with BCrypt hashes |
 
 ---
 
-# 🚀 Installation Guide
+## 🚀 Local Setup & Installation
 
-## Prerequisites
+### Option 1: Run with Docker (Recommended - 1 Command)
 
-Install the following software:
+If you have [Docker](https://www.docker.com/) installed, you can build and run the entire stack without configuring NetBeans or Tomcat manually:
 
-- Java JDK 17 (or your compatible version)
-- Apache NetBeans
-- Apache Tomcat 10.x
-- MySQL Server 8.x
-- MySQL Workbench
-- Git (optional)
+```bash
+# 1. Clone the repository
+git clone https://github.com/Souvik686/college-erp-system.git
+cd college-erp-system
+
+# 2. Build the Docker container
+docker build -t college-erp .
+
+# 3. Run the container
+docker run -p 8080:8080 college-erp
+```
+Then visit **`http://localhost:8080`** in your browser.
 
 ---
 
-## Step 1 : Clone the Repository
+### Option 2: Traditional Setup (NetBeans / Tomcat / MySQL)
 
+#### Prerequisites
+- **JDK 11 or 17** installed and configured in `JAVA_HOME`
+- **Apache Tomcat 10.x** (compatible with Jakarta EE 10)
+- **MySQL Server 8.0+**
+- **Apache NetBeans** or IntelliJ IDEA
+
+#### 1. Clone the Repository
 ```bash
 git clone https://github.com/Souvik686/college-erp-system.git
 ```
 
-Or download the ZIP from GitHub.
-
----
-
-## Step 2 : Open Project
-
-Open **Apache NetBeans**
-
-```
-File
-→ Open Project
-```
-
-Select the **CollegeERP** project.
-
-Wait for Maven to download all required dependencies.
-
----
-
-## Step 3 : Create Database
-
-Open MySQL Workbench and execute:
-
+#### 2. Import Database
+Open MySQL Workbench or CLI and run:
 ```sql
 CREATE DATABASE college_erp;
+USE college_erp;
+SOURCE database/college_erp.sql;
 ```
 
----
-
-## Step 4 : Import Database
-
-Import the following file into the **college_erp** database:
-
+#### 3. Database Credentials Configuration
+Database settings are externalized. You can either export environment variables:
+```bash
+export DB_URL="jdbc:mysql://localhost:3306/college_erp"
+export DB_USER="root"
+export DB_PASSWORD="YOUR_LOCAL_PASSWORD"
 ```
-database/college_erp.sql
-```
+Or customize the local fallbacks in `src/main/java/util/DBConnection.java`.
+
+#### 4. Build and Run
+1. Open the project folder in **Apache NetBeans**.
+2. Right-click project → **Clean and Build**.
+3. Right-click project → **Run** (ensure Tomcat 10 is selected).
+4. Access at: `http://localhost:8080/`
 
 ---
 
-## Step 5 : Configure Database Connection
+## 📸 Application Screenshots
 
-Open:
-
-```
-src/main/java/util/DBConnection.java
-```
-
-Update your MySQL credentials:
-
-```java
-private static final String URL =
-"jdbc:mysql://localhost:3306/college_erp";
-
-private static final String USER =
-"root";
-
-private static final String PASSWORD =
-"YOUR_MYSQL_PASSWORD";
-```
+### 🏠 Landing Page
+![Home Page](screenshots/home-page.png)
 
 ---
 
-## Step 6 : Configure Apache Tomcat
-
-In NetBeans:
-
-```
-Services
-→ Servers
-→ Add Server
-```
-
-Select:
-
-```
-Apache Tomcat 10.x
-```
+### 👨‍💼 Administrator Dashboard
+![Admin Dashboard](screenshots/admin-dashboard.png)
 
 ---
 
-## Step 7 : Build the Project
-
-Right-click the project:
-
-```
-Clean and Build
-```
+### 👨‍🏫 Faculty Dashboard
+![Faculty Dashboard](screenshots/faculty-dashboard.png)
 
 ---
 
-## Step 8 : Run the Project
-
-Right-click the project:
-
-```
-Run
-```
-
-or
-
-```
-Run Project
-```
+### 👨‍🎓 Student Dashboard
+![Student Dashboard](screenshots/student-dashboard.png)
 
 ---
 
-## Step 9 : Open in Browser
-
-```
-http://localhost:8080/CollegeERP/
-```
+### 👨‍🎓 Student Management (CRUD)
+![Student Management](screenshots/student-management.png)
 
 ---
 
-# 🔑 Demo Credentials
-
-## 👨‍💼 Admin
-
-| Username | Password |
-|----------|----------|
-| **Souvik** | **admin** |
+### 👨‍🏫 Faculty Management
+![Faculty Management](screenshots/faculty-management.png)
 
 ---
 
-## 👨‍🏫 Faculty
-
-| Username | Password |
-|----------|----------|
-| faculty1 | faculty |
-| faculty2 | faculty |
-| faculty3 | faculty |
+### 📚 Subject & Curriculum Management
+![Subject Management](screenshots/subject-management.png)
 
 ---
 
-## 👨‍🎓 Student
-
-| Username | Password |
-|----------|----------|
-| student1 | student |
-| student2 | student |
-| student3 | student |
+### 📋 Attendance Management & Daily Marking
+![Attendance Management](screenshots/attendance-management.png)
 
 ---
 
-# 📸 Screenshots
-
-## 🏠 Home Page
-
-<img width="1920" height="1020" alt="Screenshot 2026-08-03 185335" src="https://github.com/user-attachments/assets/4e94d81c-79e8-4882-8366-16fc1e21e87a" />
+### 📊 Attendance Analytics & Reports
+![Attendance Report](screenshots/attendance-report.png)
 
 ---
 
-## 👨‍💼 Admin Dashboard
+## 🔒 Security Best Practices Implemented
 
-<img width="1920" height="1020" alt="Screenshot 2026-08-03 185452" src="https://github.com/user-attachments/assets/c5fc7d60-44c3-4a44-97f3-b1dbf8ad4eab" />
-
----
-
-## 👨‍🏫 Faculty Dashboard
-
-<img width="1920" height="1020" alt="Screenshot 2026-08-03 185514" src="https://github.com/user-attachments/assets/8f2efc7e-2a22-450b-9640-ba5009ced0b0" />
+* **BCrypt Password Hashing:** User passwords are encrypted with individual dynamic salts using BCrypt before database persistence.
+* **SQL Injection Prevention:** 100% of data layer operations execute through parameterized `PreparedStatement` interfaces.
+* **Role-Based Access Control (RBAC):** HTTP Session guards enforce role authorization (`role_id: 1=Admin, 2=Faculty, 3=Student`) across all protected endpoints.
+* **Database Isolation:** Credentials support externalized environment variable injection for 12-factor cloud deployment.
 
 ---
 
-## 👨‍🎓 Student Dashboard
+## 👨‍💻 Author
 
-<img width="1920" height="1020" alt="Screenshot 2026-08-03 185538" src="https://github.com/user-attachments/assets/4f612afc-9fa3-4c35-8f33-ef662bf4af37" />
-
----
-
-## 👨‍🎓 Student Management
-
-<img width="1920" height="1020" alt="Screenshot 2026-08-03 185641" src="https://github.com/user-attachments/assets/91d7b6d6-67af-4507-b93c-6ae90eeb011c" />
-
----
-
-## 👨‍🏫 Faculty Management
-
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/719f7136-a7a8-4917-b0da-defe49418b2d" />
-
----
-
-## 📚 Subject Management
-
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/68c33d62-fe9a-4215-b7ef-c0c59037d5fc" />
-
----
-
-## 📋 Attendance Management
-
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/149d1cb0-6184-40a0-b114-0d15a4c70274" />
-
----
-
-## 📊 Attendance Report
-
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/7b9b7379-27af-4769-8fb8-934cd519315a" />
-
----
-
-# 🔒 Security Features
-
-- BCrypt Password Hashing
-- Role-Based Authentication
-- Session Management
-- JDBC Prepared Statements
-- Secure Login System
-
----
-
-# 📚 Learning Objectives
-
-This project demonstrates:
-
-- Java Web Development
-- MVC Architecture
-- JSP & Servlets
-- JDBC Database Connectivity
-- CRUD Operations
-- MySQL Database Design
-- Authentication & Authorization
-- Session Management
-- Maven Project Structure
-
----
-
-# 🎯 Future Enhancements
-
-- Student Result Management
-- Fee Management System
-- Timetable Management
-- Parent Portal
-- Email Notifications
-- Dashboard Analytics
-- REST API
-- Responsive User Interface
-
----
-
-# 🤝 Contributing
-
-Contributions are welcome.
-
-1. Fork this repository.
-2. Create a feature branch.
-3. Commit your changes.
-4. Push to your branch.
-5. Open a Pull Request.
-
----
-
-# 📄 License
-
-This project is licensed under the **MIT License**.
-
----
-
-# 👨‍💻 Author
-
-## Souvik Sarkar
-
-Bachelor of Computer Applications (BCA)
-
-GitHub: https://github.com/Souvik686
+**Souvik Sarkar**  
+*Bachelor of Computer Applications (BCA)*  
+* GitHub: [@Souvik686](https://github.com/Souvik686)
 
 ---
 
 <div align="center">
 
-### ⭐ If you found this project useful, please consider giving it a Star!
+### ⭐ If this project was helpful, please give it a Star on GitHub!
 
-Made with ❤️ using Java, JSP, Servlets & MySQL
+MIT License • Developed with Java, Servlets, JSP & MySQL
 
 </div>
