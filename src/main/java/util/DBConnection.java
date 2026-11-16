@@ -12,13 +12,13 @@ public class DBConnection {
         String password = System.getenv("DB_PASSWORD");
 
         if (url == null || url.trim().isEmpty()) {
-            url = "jdbc:mysql://localhost:3306/college_erp";
+            url = "jdbc:mysql://gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/college_erp?useSSL=true&serverTimezone=UTC";
         }
         if (user == null || user.trim().isEmpty()) {
-            user = "root";
+            user = "4CmAy49sGjswZos.root";
         }
-        if (password == null) {
-            password = "student123";
+        if (password == null || password.trim().isEmpty() || password.equals("student123")) {
+            password = "MAJbzUXy7aUzMJS2";
         }
 
         try {

@@ -34,9 +34,9 @@
         String user = System.getenv("DB_USER");
         String password = System.getenv("DB_PASSWORD");
         
-        if (url == null) url = "jdbc:mysql://localhost:3306/college_erp";
-        if (user == null) user = "root";
-        if (password == null) password = "student123";
+        if (url == null || url.trim().isEmpty()) url = "jdbc:mysql://gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/college_erp?useSSL=true&serverTimezone=UTC";
+        if (user == null || user.trim().isEmpty()) user = "4CmAy49sGjswZos.root";
+        if (password == null || password.trim().isEmpty() || password.equals("student123")) password = "MAJbzUXy7aUzMJS2";
 
         Connection con = null;
         try {
